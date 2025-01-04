@@ -43,3 +43,7 @@ task copyClientApp(type: Copy) {
 // Ensure copying the client webapp happens before building the jar (assemble) or running the app (bootRun)
 tasks.assemble.dependsOn copyClientApp
 tasks.bootRun.dependsOn copyClientApp
+
+node {
+    download = true
+}
